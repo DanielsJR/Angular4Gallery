@@ -1,0 +1,28 @@
+<div class="col-md-10 col-md-offset-1">
+    <div>
+      <a [routerLink]="['/admin/images']" class="btn btn-default"> Volver</a>
+    </div>
+  </div>
+  
+  <div class="col-md-10 col-md-offset-1">
+    <div class="well well bs-component">
+      <form novalidate class="form-horizontal" (ngSubmit)="deleteImage(image)" #editImageForm="ngForm">
+        <fieldset>
+          <legend>Eliminando: {{image.id}}</legend>
+          <div class="form-group">
+            <label for="thumbnail" class="col-lg-2 control-label">Id</label>
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="Miniatura de la imagen" [(ngModel)]="image.id" #id="ngModel">
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <a [routerLink]="['/admin/']" class="btn btn-default"> Cancelar</a>
+              <button type="submit" class="btn btn-primary" [disabled]="editImageForm.invalid">Borrar</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>

@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
           <div *ngFor="let image of images | async" (click)="onSelect(image)">
             <a>
               <div class="col-md-3 col-sm-4 col-xs-6">
-                <img class="img-responsive" src="{{image.thumbnail}}" />
+                <img class="img-responsive" src="{{image.thumbnail}}" width="200" heigh="400"/>
               </div>
             </a>
           </div>
